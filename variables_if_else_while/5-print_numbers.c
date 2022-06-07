@@ -6,11 +6,11 @@
 */
 int main(void)
 {
-int number = 0;
-while (number < 10)
+int i = 0;
+while (i < 10)
 {
-printf("%d", number);
-number++;
+printf("%d", i);
+i++;
 printf("\n");
 return (0);
 }
