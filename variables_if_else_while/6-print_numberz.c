@@ -12,6 +12,6 @@ while (number <= '9')
 putchar(number);
 number++;
 }
-putchar('\n')
+putchar('\n');
 return (0);
 }
