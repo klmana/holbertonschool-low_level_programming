@@ -18,6 +18,7 @@ else
 putchar(letter);
 letter += 1;
 }
+}
 putchar('\n');
 return (0);
 }
