@@ -16,6 +16,6 @@ for (alphabet = 'a'; alphabet <= 'f'; alphabet++)
 {
 putchar(alphabet);
 }
-putchar('\n')
+putchar('\n');
 return (0);
 }
