@@ -11,6 +11,6 @@ for (alphabet = 'z'; alphabet >= 'a'; alphabed--)
 {
 putchar (alphabet);
 }
-putchar ('\n')
+putchar ('\n');
 return (0);
 }
