@@ -7,7 +7,7 @@
  *we define a variable a that is the length of the string s
  * s[a] is definining an array of the length of the string of characters defined by s
  * the for loop takes all the possible values of a from 0 until the end of the arrray done by s
- *then the function returns the lenghts of s whcih is a
+ *then the function returns the lenghts of s whcih is an
  */
 int _strlen(char *s)
 {
