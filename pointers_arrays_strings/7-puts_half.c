@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *strlen - return the lenght of s string
+ *_strlen - return the lenght of s string
  *@s: character type
  *Return: i
  */
