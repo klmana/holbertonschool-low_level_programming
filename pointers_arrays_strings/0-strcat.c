@@ -4,7 +4,7 @@
  *_strcat - function that concatenates two strings.
  *@src: overwriting the terminating null byte (\0)
  *@dest: This function appends the src string to the dest string,
- *Return : a pointer to the resulting string dest
+ *Return: a pointer to the resulting string dest
  */
 char *_strcat(char *dest, char *src)
 {
