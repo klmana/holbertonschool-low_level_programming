@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  *_strcat - function that concatenates two strings.
  *@src: overwriting the terminating null byte (\0)
@@ -25,5 +24,5 @@ char *_strcat(char *dest, char *src)
 	}
 	dest[a] = '\0';
 
-return (dest);
+	return (dest);
 }
