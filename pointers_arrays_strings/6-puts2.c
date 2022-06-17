@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *puts2 - character of a string, starting with the first character
- *
+ *@str: char type pointer
  *
  */
 void puts2(char *str)
