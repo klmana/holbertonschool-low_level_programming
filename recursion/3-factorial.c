@@ -1,12 +1,21 @@
 #include "main.h"
 
 /**
- * function - 
- * @dest: 
+ *factorial - function that returns the factorial of a given number.
+ * @n: number
  *
- * Return: 
+ * Return: -1 if n less  than 0; 0 if n equal 0, value of factor n otherwise
  */
-returntype function(parameters)
+int factorial(int n)
 {
+	if (n < 0)
+	{
+		return (-1);
+	}
+	if (n == 0)
+	{
+		return (1);
+	}
+	return (n * factorial(n - 1));
 
 }
