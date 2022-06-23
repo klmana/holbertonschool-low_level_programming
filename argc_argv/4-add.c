@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
  *main - Write a program that adds positive numbers.
  *@argc: number of the arguments
@@ -13,7 +13,9 @@ int main(int argc, char *argv[])
 	int i;
 	int j;
 
-	int result = 0;
+	int result;
+
+	result = 0;
 
 	if (argc < 2)
 	{
@@ -24,7 +26,7 @@ int main(int argc, char *argv[])
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (argv[i][j] < 48 || argv[i][j] > 57)
+			if(isalpha(argv[i][j]) != 0)
 			{
 				printf("Error\n");
 				return (1);
