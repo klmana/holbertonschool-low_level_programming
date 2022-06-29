@@ -4,7 +4,7 @@
 /**
  *init_dog - function that initialize a variable of type struct dog
  *@d: pointer to dog struct
- *#name: pointer to the dog name
+ *@name: pointer to the dog name
  *@age: pointer to the dog age
  *@owner: Pointer to the dog owner
  */
