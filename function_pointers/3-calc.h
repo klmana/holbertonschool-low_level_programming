@@ -20,11 +20,11 @@ typedef struct op
 } op_t;
 
 
-int op_addition(int a, int b);
-int op_subtraction(int a, int b);
-int op_multiplication(int a, int b);
-int op_divisio(int a, int b);
-int op_modulo(int a, int b);
+int op_add(int a, int b);
+int op_sub(int a, int b);
+int op_mul(int a, int b);
+int op_div(int a, int b);
+int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 
 #endif
