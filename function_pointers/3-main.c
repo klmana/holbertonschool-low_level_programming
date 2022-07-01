@@ -13,7 +13,13 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		return (0);
+		printf("Error\n");
+		exit(98);
+	}
+	if (f == NULL)
+	{
+		printf("Error\n");
+		exit(99);
 	}
 	resul = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
 	printf("%d\n", resul);
