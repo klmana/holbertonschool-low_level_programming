@@ -10,6 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int resul;
+	int (*f)(int, int);
 
 	if (argc != 4)
 	{
