@@ -1,4 +1,4 @@
 CC = gcc
-SRC = main.c school.c
+SRC = school.c main.c
 all:
-	$(CC) $(SRC) -0 school
+	$(CC) $(SRC) -o school
