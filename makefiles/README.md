@@ -30,7 +30,8 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 In the following tasks, we are going to use these files. We want to compile these only.
 
 
-0. make -f 0-Makefile
+> 0. make -f 0-Makefile
+
 Create your first Makefile.
 Requirements:
 .name of the executable: school
@@ -39,8 +40,8 @@ The all rule builds your executable
 .variables: none
 
 
-1. make -f 1-Makefile
-Requirements:
+> 1. make -f 1-Makefile
+
 :name of the executable: school
 :rules: all
 .The all rule builds your executable
@@ -49,9 +50,9 @@ Requirements:
 .SRC: the .c files
 
 
-2. make -f 2-Makefile
+> 2. make -f 2-Makefile
+
 Create your first useful Makefile.
-Requirements:
 :name of the executable: school
 :rules: all
 .The all rule builds your executable
@@ -64,8 +65,8 @@ Requirements:
 :You are not allowed to have a list of all the .o files
 
 
-3. make -f 3-Makefile
-Requirements:
+> 3. make -f 3-Makefile
+
 :name of the executable: school
 :rules: all, clean, oclean, fclean, re
 .all: builds your executable
@@ -84,8 +85,8 @@ Requirements:
 :You are not allowed to have a list of all the .o files
 
 
-4. A complete Makefile
-Requirements:
+> 4. A complete Makefile
+
 :name of the executable: school
 :rules: all, clean, fclean, oclean, re
 .all: builds your executable
