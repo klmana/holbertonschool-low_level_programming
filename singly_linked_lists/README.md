@@ -52,7 +52,7 @@ typedef struct list_s
 
 ## Questions And The Answers ##
 
-What’s a node?
+## What’s a node? ##
 
 :It’s a structure with a pointer to the next node and value information
 
