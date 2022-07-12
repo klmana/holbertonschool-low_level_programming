@@ -59,21 +59,22 @@ What’s a node?
 :It’s a space allocated in memory
 
 
-# What’s the “head” of a linked list?
+## What’s the “head” of a linked list? ##
 
 :It’s the first node
 
 
-# What’s the “tail” of a linked list?
+## What’s the “tail” of a linked list? ##
 
 :It’s the node with the pointer to the next equals to NULL
 
-# In a singly linked list, what are possible directions to traverse it?
+## In a singly linked list, what are possible directions to traverse it? ##
 
 :Forward
 
 
-# Arrays Vs Linked Lists: select all true statements
+## Arrays Vs Linked Lists: select all true statements ##
+
 :We can add elements indefinitely to a linked list
 
 :Linked list can contain as value a structure
@@ -87,7 +88,7 @@ What’s a node?
 
 ## Tasks ##
 
-# 0. Print list
+## 0. Print list ##
 >Write a function that prints all the elements of a list_t list
 
 .Prototype: size_t print_list(const list_t *h);
@@ -101,13 +102,13 @@ What’s a node?
 .You are allowed to use printf
 
 
-# 1. List length
+## 1. List length ##
 >Write a function that returns the number of elements in a linked list_t list.
 
 .Prototype: size_t list_len(const list_t *h);
 
 
-# 2. Add node
+## 2. Add node ##
 >Write a function that adds a new node at the beginning of a list_t list.
 
 .Prototype: list_t *add_node(list_t **head, const char *str);
@@ -119,7 +120,7 @@ What’s a node?
 .You are allowed to use strdup
 
 
-# 3. Add node at the end
+## 3. Add node at the end ##
 >Write a function that adds a new node at the end of a list_t list.
 
 .Prototype: list_t *add_node_end(list_t **head, const char *str);
@@ -130,7 +131,7 @@ What’s a node?
 
 .You are allowed to use strdup
 
-# 4. Free list
+## 4. Free list ##
 >Write a function that frees a list_t list.
 
 .Prototype: void free_list(list_t *head);
