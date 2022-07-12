@@ -50,57 +50,87 @@ typedef struct list_s
 } list_t;
 
 
-## Questions ##
+## Questions And The Answers ##
+
 What’s a node?
-#The answers>
+
 :It’s a structure with a pointer to the next node and value information
+
 :It’s a space allocated in memory
 
-#What’s the “head” of a linked list?
+
+# What’s the “head” of a linked list?
+
 :It’s the first node
 
-#What’s the “tail” of a linked list?
+
+# What’s the “tail” of a linked list?
+
 :It’s the node with the pointer to the next equals to NULL
 
-#In a singly linked list, what are possible directions to traverse it?
+# In a singly linked list, what are possible directions to traverse it?
+
 :Forward
 
-#Arrays Vs Linked Lists: select all true statements
+
+# Arrays Vs Linked Lists: select all true statements
 :We can add elements indefinitely to a linked list
+
 :Linked list can contain as value a structure
+
 :Array can contain as value a structure
+
 :We can easily removed an element from a Linked list
+
 :Memory is aligned for an Array - each elements are back to back in the memory
 
 
 ## Tasks ##
 
-#0. Print list
+# 0. Print list
 >Write a function that prints all the elements of a list_t list
+
 .Prototype: size_t print_list(const list_t *h);
+
 .Return: the number of nodes
+
 .Format: see example
+
 .If str is NULL, print [0] (nil)
+
 .You are allowed to use printf
 
-#1. List length
+
+# 1. List length
 >Write a function that returns the number of elements in a linked list_t list.
+
 .Prototype: size_t list_len(const list_t *h);
 
-#2. Add node
+
+# 2. Add node
 >Write a function that adds a new node at the beginning of a list_t list.
+
 .Prototype: list_t *add_node(list_t **head, const char *str);
+
 .Return: the address of the new element, or NULL if it failed
+
 .str needs to be duplicated
+
 .You are allowed to use strdup
 
-#3. Add node at the end
+
+# 3. Add node at the end
 >Write a function that adds a new node at the end of a list_t list.
+
 .Prototype: list_t *add_node_end(list_t **head, const char *str);
+
 .Return: the address of the new element, or NULL if it failed
+
 .str needs to be duplicated
+
 .You are allowed to use strdup
 
-#4. Free list
+# 4. Free list
 >Write a function that frees a list_t list.
+
 .Prototype: void free_list(list_t *head);
