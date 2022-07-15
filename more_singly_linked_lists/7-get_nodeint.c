@@ -20,5 +20,9 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		head = head->next;
 		counter++;
 	}
-	return(head);
+	/* returns the value only if the counter is within the index value */
+	if (counter == index)
+		return (head);
+	/* if the counter is not within the index then return NULL */
+	return (NULL);
 }
