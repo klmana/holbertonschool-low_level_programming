@@ -15,7 +15,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	if (head == NULL)
 		return (NULL);
 	/* iteration until reaching the end of the list to run the loop */
-	while (counter < index)
+	while (counter < index && head != NULL)
 	{
 		head = head->next;
 		counter++;
