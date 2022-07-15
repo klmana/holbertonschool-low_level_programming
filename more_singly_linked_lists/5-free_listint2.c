@@ -10,6 +10,8 @@ void free_listint2(listint_t **head)
 {
 	/* define interim as a temporary list */
 	listint_t *interim;
+	if (head == NULL)
+		*head = NULL;
 
 	/* while loop until end of the list */
 	while (*head != NULL)
@@ -27,5 +29,4 @@ void free_listint2(listint_t **head)
 		 * then is freed node by node via the interim node
 		 */
 	}
-	*head = NULL;
 }
