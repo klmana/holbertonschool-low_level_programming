@@ -27,4 +27,5 @@ void free_listint2(listint_t **head)
 		 * then is freed node by node via the interim node
 		 */
 	}
+	*head = NULL;
 }
