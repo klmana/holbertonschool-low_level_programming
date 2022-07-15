@@ -10,8 +10,9 @@ void free_listint2(listint_t **head)
 {
 	/* define interim as a temporary list */
 	listint_t *interim;
+
 	if (head == NULL)
-		*head = NULL;
+		return;
 
 	/* while loop until end of the list */
 	while (*head != NULL)
