@@ -27,24 +27,24 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int index;
 	unsigned int sum;
 
-	length = _strlen(b);
+	length = _strlen(b) - 1;
 	index = 0;
 	sum = 0;
 
 	/* case if b is null then value returned should be 0 */
 	if (b == NULL)
-		return (sum);
+		return (0);
 	/* interate while loop to count on the string of char b*/
 	while (b[index] != '\0')
 	{
 		/* case where there is something else than a 0 and 1 in the string */
 		if (b[index] != '0' && b[index] != '1')
-			return (sum);
+			return (0);
 		/* case where there is a 1 in the binary value */
 		if (b[index] == '1')
 			/* if 1 then multiply by power of 2 */
 			/* power of 2 is adding 2 0 to the left of binary */
-			sum += (1 * (1 << length)) / 2;
+			sum += (1 * (1 << length));
 		index++;
 		length--;
 	}
