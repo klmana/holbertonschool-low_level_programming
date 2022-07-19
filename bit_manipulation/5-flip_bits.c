@@ -14,7 +14,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	diff = 0;
 	/**
 	 * Compares the last numbers of the binary number
-	 * until the end of the string so when either n or m are equal to 0 
+	 * until the end of the string so when either n or m are equal to 0
 	 */
 	while (n != 0 || m != 0)
 	{
