@@ -1,24 +1,6 @@
 #include "lists.h"
 
 /**
- *dlistint_len - function that returns number of elements in a linked dlistint
- *@h: the list
- *Return: number of elements/nodes
- */
-size_t dlistint_len(const dlistint_t *h)
-{
-	size_t nodesCount;
-
-	nodesCount = 0;
-	while (h != NULL)
-	{
-		nodesCount++;
-		h = h->next;
-	}
-	return (nodesCount);
-}
-
-/**
  * delete_dnodeint_at_index - fctn that deletes a node at index
  * @head: head of linked list
  * @index: index to delete new node
@@ -27,40 +9,41 @@ size_t dlistint_len(const dlistint_t *h)
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int count;
-	dlistint_t *interim;
-
-	count = 0;
+	dlistint_t *toBeRemoved = NULL;
 
 	/* case with empty list as per instructions */
-	if ((*head) == NULL)
+	if (*head == NULL)
+		return (-1);
+	if (head == NULL)
 		return (-1);
 
-	/* defining the head as the temporary node for the index */
-	interim = *head;
+	toBeRemoved = *head;
+
 	/* case when deleting the first node in the index */
 	if (index == 0)
 	{
-		(*head) = (*head)->next;
+		*head = (*head)->next;
+		free(toBeRemoved);
 		if ((*head) != NULL)
-		{
 			(*head)->prev = NULL;
-		}
-		free(interim);
 		return (1);
 	}
 	/* any other case than the previous ones */
 	/* start the loop to reach the node before the one to delete (indx-1) */
-	while (count < (index - 1) && interim != NULL)
+	while ((index != 0) && (toBeRemoved->next != NULL))
 	{
-		interim = interim->next;
-		count++;
+		index -= 1;
+		toBeRemoved = toBeRemoved->next;
 	}
-	/* case where the asked node to delete is not in the range */
-	if (count != (index - 1) || interim->next == NULL)
-		return (-1);
-	if (interim->next != NULL)
-		interim->next->prev = interim->prev;
-	free(interim);
-	return (1);
+
+/* case where the asked node to delete is not in the range */
+	if (index == 0)
+	{
+		toBeRemoved->prev->next = toBeRemoved->next;
+		if (toBeRemoved->next != NULL)
+			toBeRemoved->next->prev = toBeRemoved->prev;
+		free(toBeRemoved);
+		return (1);
+	}
+	return (-1);
 }
