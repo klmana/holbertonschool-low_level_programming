@@ -50,7 +50,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	}
 	/* define&link the newNode its place within the list using interim*/
-	newNode->next = interim->next;
-	interim->next = newNode;
-	return (newNode);
+	     newNode->next = interim->next;
+	     newNode->prev = interim;
+	     interim->next = newNode;
+	     return (newNode);
 }
