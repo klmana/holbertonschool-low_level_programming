@@ -27,7 +27,9 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	}
 	/*link the newNode to point to the head of the list*/
 	newNode->next = *head;
+	newNode->prev = NULL;
 	/*define newNode as being the new head of the list*/
+	(*head)->prev = newNode;
 	*head = newNode;
 	return (newNode);
 }
