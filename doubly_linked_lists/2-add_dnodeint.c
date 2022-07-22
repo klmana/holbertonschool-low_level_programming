@@ -17,6 +17,14 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		return (NULL);
 	/*set the values of the newNode to n*/
 	newNode->n = n;
+	/* case where linked list is empty */
+	if (*head == NULL)
+	{
+		*head = newNode;
+		newNode->next = NULL;
+		newNode->prev = NULL;
+		return (newNode);
+	}
 	/*link the newNode to point to the head of the list*/
 	newNode->next = *head;
 	/*define newNode as being the new head of the list*/
