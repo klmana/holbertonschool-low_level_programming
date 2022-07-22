@@ -26,6 +26,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	/* assign temporary value of newNode to n */
 	newNode->n = n;
+	     /* define the interim/temporary as the head to start indexing */
+	     interim = *h;
 	/* case where index is 0 then has to insert newNode as head) */
 	if (idx == 0)
 	{
@@ -37,8 +39,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (newNode);
 	}
 	/* any other case than the previous ones */
-	/* define the interim/temporary as the head to start indexing */
-	interim = *h;
+
 	/* start the loop to reach the node before the one to add (indx -1) */
 	while (count < (idx - 1))
 	{
