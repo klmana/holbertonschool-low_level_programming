@@ -1,6 +1,24 @@
 #include "lists.h"
 
 /**
+ *dlistint_len - function that returns number of elements in a linked dlistint
+ *@h: the list
+ *Return: number of elements/nodes
+ */
+size_t dlistint_len(const dlistint_t *h)
+{
+	size_t nodesCount;
+
+	nodesCount = 0;
+	while (h != NULL)
+	{
+		nodesCount++;
+		h = h->next;
+	}
+	return (nodesCount);
+}
+
+/**
  * insert_dnodeint_at_index - fctn that insert a new node at a given position
  * @h: head of linked list
  * @idx: index to insert new node
@@ -10,12 +28,15 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int count;
+	unsigned int count, len;
 	dlistint_t *newNode;
 	dlistint_t *interim;
 
 	count = 0;
+	len = dlistint_len(*h);
 
+	if (len < idx)
+		return (NULL);
 	/* case with empty list */
 	if (h == NULL)
 		return (NULL);
