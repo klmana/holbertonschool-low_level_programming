@@ -3,8 +3,7 @@
 /**
  *print_array - Prints an array of integers
  *@array: The array to be printed
- *@left: index of array
- *@right: index of array
+ *@size: The size of the array
  */
 void print_array(int *array, size_t size)
 {
@@ -34,7 +33,7 @@ int binary_search(int *array, size_t size, int value)
 	size_t left = 0;
 	size_t right = size - 1;
 
-	if (array == NULL)
+	if (!array)
 		return (-1);
 	while (left <= right)
 	{
