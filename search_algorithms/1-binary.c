@@ -6,19 +6,17 @@
  *@left: index of array
  *@right: index of array
  */
-void print_array(int *array, size_t left, size_t right)
+void print_array(int *array, size_t size)
 {
-	size_t index;
+	size_t index = 0;
 
-	index = left;
-	while (index <= right)
+	printf("searching in array: ");
+	while (index < size)
 	{
-		if (index != right)
-			printf("%d, ", array[index]);
-		else
-			printf("%d\n", array[index]);
+		printf("%d, ", array[index]);
 		index = index + 1;
 	}
+	printf("%d\n", array[index]);
 }
 
 /**
@@ -38,16 +36,16 @@ int binary_search(int *array, size_t size, int value)
 
 	if (array == NULL)
 		return (-1);
-	while (left < right)
+	while (left <= right)
 	{
-		print_array(array, left, right);
-		midlekey = (left + right) / 2;
-		if (array[midlekey] == value)
-			return (midlekey);
+		print_array(array + left, right - left);
+		midlekey = ((left + right) / 2);
+		if (array[midlekey] < value)
+			left = midlekey + 1;
 		else if (array[midlekey] > value)
 			right = midlekey - 1;
 		else
-			left = midlekey + 1;
+			return (midlekey);
 	}
 	return (-1);
 }
