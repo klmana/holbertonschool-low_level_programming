@@ -35,6 +35,7 @@ int binary_search(int *array, size_t size, int value)
 
 	if (array == NULL)
 		return (-1);
+
 	right = size - 1;
 	while (left <= right)
 	{
@@ -42,7 +43,7 @@ int binary_search(int *array, size_t size, int value)
 		midlekey = left + (right - left) / 2;
 		if (array[midlekey] < value)
 			left = midlekey + 1;
-		else if (array[midlekey] > value)
+		if (array[midlekey] > value)
 			right = midlekey - 1;
 		else
 			return (midlekey);
