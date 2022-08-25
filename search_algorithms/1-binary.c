@@ -9,7 +9,7 @@ void print_array(int *array, size_t size)
 {
 	size_t index = 0;
 
-	printf("searching in array: ");
+	printf("Searching in array: ");
 	while (index < size)
 	{
 		printf("%d, ", array[index]);
